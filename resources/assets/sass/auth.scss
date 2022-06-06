@@ -1,0 +1,23 @@
+@import "config";
+
+@import "mixin";
+
+#auth-page{
+    height: 100vh;
+}
+
+#auth-banner{
+    background-color:$authBannerBg;
+    padding:50px;
+    height:100vh;
+
+    > h3 {
+        margin:0;
+    }
+}
+
+#auth-box{
+    padding:50px;
+    height: 100vh;
+    background-color: $authBoxBg;
+}

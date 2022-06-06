@@ -1,0 +1,70 @@
+@import "config";
+
+@import "mixin";
+
+.box-icon{
+    background-color: #fff;
+    display: table;
+    width:100%;
+    > .icon{
+        padding:10px;
+        display: table-cell;
+        background-color: $mediumBase;
+        text-align: center;
+        vertical-align: middle;
+        &.primary{
+            background-color: lighten($primaryColor,35%);
+            > i.fa{
+                color:darken($primaryColor,10%);
+            }
+            + p{
+                border-bottom:2px solid lighten($primaryColor,35%);
+            }
+        }
+        &.warning{
+            background-color: lighten($warningColor,35%);
+            > i.fa{
+                color:darken($warningColor,10%);
+            }
+            + p{
+                border-bottom:2px solid lighten($warningColor,35%);
+            }
+        }
+        &.success{
+            background-color: lighten($successColor,35%);
+            > i.fa{
+                color:darken($successColor,10%);
+            }
+            + p{
+                border-bottom:2px solid lighten($successColor,35%);
+            }
+        }
+    }
+    > p{
+        margin:0;
+        padding:10px;
+        display: table-cell;
+        > span{
+            &:first-child{
+                color:rgba(0,0,0,.5);
+            }
+            &:last-child{
+                font-weight: bold;
+            }
+            display: block;
+        }
+    }
+
+    &.box-lg{
+        > p{
+            > span{
+                &:first-child{
+                    font-size:25px;
+                }
+                &:last-child{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

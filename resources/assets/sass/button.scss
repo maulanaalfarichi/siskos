@@ -1,0 +1,45 @@
+@import "mixin";
+@import "config";
+
+.btn{
+    @include borderRadius(2px);
+    @include boxShadow(0 1px 1px rgba(0,0,0,.05));
+    border:none;
+    outline: none !important;
+    &.btn-primary{
+        background-color: $primaryColor;
+        @include getFontColor($primaryColor);
+    }
+    &.btn-danger{
+        background-color: $dangerColor;
+        @include getFontColor($dangerColor);
+    }
+    &.btn-boolean{
+        @include borderRadius(20px);
+        @include boxShadow(none);
+        width:70px;
+        padding:3px;
+        background-color:#ddd;
+        &.active{
+            background-color:$primaryColor;
+        }
+        > .btn-mark{
+            @include borderRadius(50%);
+            width:30px;
+            height:30px;
+            background-color:#fff;
+            position: relative;
+        }
+    }
+}
+
+.btn-circle{
+    background-color:transparent;
+    border:1px solid rgba(0,0,0,.4);
+    @include borderRadius(50%);
+    color:rgba(0,0,0,.4);
+    &:hover{
+        border:1px solid rgba(0,0,0,.6);
+        color:rgba(0,0,0,.6);
+    }
+}

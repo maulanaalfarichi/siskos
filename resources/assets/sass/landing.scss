@@ -1,0 +1,45 @@
+@import "mixin";
+
+@import "input";
+
+#landing-wrapper{
+    padding:150px 0;
+    margin-top:-30px;
+    background-color:lighten($primaryColor,30%);
+    background-image: url('../images/bg.jpg');
+    background-size:100%;
+    background-position: center;
+    background-attachment: fixed;
+    margin-bottom: -30px;
+    h1{
+        font-size: 45px;
+        font-weight: bold;
+    }
+    h1,h4{
+        text-align: center;
+        color:#fFf;
+    }
+    h4{
+        margin-bottom: 30px;
+    }
+    > .row{
+        margin:0;
+    }
+}
+
+.cloud-group{
+    position: absolute;
+    > .cloud{
+        background-color: rgba(255,255,255,.3);
+        @include borderRadius(50%);
+        &:first-child{
+            width:100px;
+            height:100px;
+        }
+        &:nth-child(2){
+            width:80px;
+            height:80px;
+            transform:translateY(-150px) translateX(70px);
+        }
+    }
+}

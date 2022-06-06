@@ -1,0 +1,112 @@
+.navbar-main {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: $primaryColor;
+    border: none;
+    .navbar-brand {
+        color: #FFFFFF;
+    }
+    .navbar-nav {
+        > .dropdown {
+            &:not(.open) {
+                > a {
+                    &:visited, &:link, &:hover {
+                        color: #fff !important;
+                    }
+                    &:hover {
+                        background-color: rgba(255, 255, 255, .1) !important;
+                        border-radius: 30px;
+                    }
+                }
+            }
+            &.open{
+
+                > a {
+                    &:visited, &:link, &:hover {
+                        border-radius: 30px;
+                        color: #fff !important;
+                        background-color: rgba(0,0,0,.15);
+                    }
+                }
+            }
+        }
+
+    }
+
+    .navbar-right{
+        > li {
+            > a {
+                &:visited,&:hover,&link{
+                    color:#fff;
+                }
+            }
+            &:hover{
+                a{
+                    background-color: rgba(255,255,255,.15);
+                    @include borderRadius(30px);
+                }
+            }
+        }
+    }
+
+    .navbar-brand{
+        padding-top:10px;
+    }
+
+    .navbar-form{
+        border:none;
+        margin-left:1px;
+        margin-right:1px;
+    }
+    .navbar-toggle{
+        border:none;
+        .icon-bar{
+            background-color: #fff;
+        }
+    }
+}
+
+.form-search {
+    background-color: rgba(255, 255, 255, .15);
+    @include borderRadius(3px);
+    padding: 0;
+    input,
+    button {
+        @include boxShadow(none);
+        background-color: transparent;
+        border: none;
+    }
+    input {
+        color: #fff;
+        font-size: 14px;
+        padding: 10px;
+        &:focus {
+            @include boxShadow(none);
+        }
+        @include setPlaceholderColor(#ffffff);
+    }
+    button {
+        &:hover,
+        &:active {
+            background-color: transparent;
+            border: none;
+        }
+        > svg {
+            transform: translateY(3px);
+        }
+    }
+}
+
+.pac-container {
+    width: 500px !important;
+    > .pac-item {
+        padding: 10px;
+    }
+    &.pac-logo {
+        &:after {
+            content: "";
+            background-image: none;
+            height: 0;
+        }
+    }
+}

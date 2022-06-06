@@ -1,0 +1,95 @@
+@import "config";
+
+@import "mixin";
+
+.navbar {
+    margin-bottom: 0;
+    border-bottom: 0;
+    &.navbar-user {
+        @include borderRadius(0);
+        min-height:10px;
+        background-color: #FFFFFF;
+        margin-bottom: 20px;
+        #stripped-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            > li{
+                float: left;
+                border-bottom: 4px solid transparent;
+                &.active{
+                    border-bottom: 4px solid $primaryColor;
+                    > a {
+                        color:$primaryColor;
+                        &:hover{
+                            color:$primaryColor;
+                        }
+                    }
+                }
+                > a{
+                    display: block;
+                    padding:12px 17px;
+                    color : darken($mediumBase,40%);
+                    &:hover{
+                        text-decoration: none;
+                        color : darken($mediumBase,60%);
+                    }
+                }
+            }
+            @include ClearFix;
+        }
+    }
+}
+
+#leftbar{
+    .img-ava{
+        width:100px;
+        height:100px;
+        margin: 0 auto;
+        display: block;
+        + h3{
+            font-size: 18px;
+            text-align: center;
+        }
+    }
+
+    > #side-menu{
+        > ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            > li{
+                border-left: 4px solid transparent;
+                > a{
+                    font-weight: bold;
+                    padding: 10px 15px;
+                    display: block;
+                    color: darken($lightBase,40%);
+                    &:hover{
+                        color:darken($lightBase,60%);
+                        text-decoration: none;
+                    }
+                }
+                &.active{
+                    border-left:4px solid $primaryColor;
+                    > a{
+                        color: $primaryColor;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    #leftbar{
+        position:fixed;
+        background-color: red;
+        float: none;
+        left:999px;
+    }
+}
+
+#image-show{
+    margin-top:10px;
+}

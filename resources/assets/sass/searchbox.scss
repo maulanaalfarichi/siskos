@@ -1,0 +1,52 @@
+#search-tron {
+    background-color: #fff;
+    padding: 0;
+    #main-search {
+        padding: 10px 0 0;
+        > input[type="text"] {
+            border: 0;
+            padding: 15px;
+            font-size: 18px;
+            background-color: transparent;
+            width: 100%;
+        }
+        .btn-submit {
+            background-color: transparent;
+            padding: 17px 15px;
+            border: none;
+            @include boxShadow(none);
+        }
+    }
+
+    > .separator {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-top: 1px dashed rgba(0, 0, 0, .5);
+        position: relative;
+        > .filter-btn {
+            background-color: #fff;
+            position: absolute;
+            height:40px;
+            width:38px;
+            color:$warningColor;
+            @include borderRadius(50%);
+            left: 47%;
+            cursor: pointer;
+            top: -15px;
+        }
+    }
+
+    > .filter-tron {
+        display: none;
+        > h4 {
+            margin: 10px;
+        }
+        > .row {
+            margin: 0;
+        }
+        label {
+            padding-left: 0;
+        }
+        padding: 15px;
+    }
+}

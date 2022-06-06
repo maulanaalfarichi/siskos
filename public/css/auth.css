@@ -1,0 +1,18 @@
+#auth-page {
+  height: 100vh;
+}
+
+#auth-banner {
+  background-color: #72b7f8;
+  padding: 50px;
+  height: 100vh;
+}
+#auth-banner > h3 {
+  margin: 0;
+}
+
+#auth-box {
+  padding: 50px;
+  height: 100vh;
+  background-color: white;
+}

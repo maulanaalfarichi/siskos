@@ -1,0 +1,7 @@
+.panel-thumb-list.panel {
+  background-color: transparent;
+  border: none;
+}
+.panel-thumb-list > .panel-heading {
+  border: none;
+}

@@ -1,0 +1,87 @@
+input,
+button {
+  outline: none;
+}
+
+.form-control {
+  background-color: #fff;
+  border: 1px solid #d5d5d5;
+  color: #333333;
+  padding: 10px;
+  font-size: 16px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.form-control.shadow-ui {
+  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.form-control.shadow-ui:focus {
+  box-shadow: none;
+  border: 0 solid #fff;
+}
+.form-control.neon-ui {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.form-control.neon-ui:focus {
+  border: 1px solid #8ac3f9;
+  -webkit-box-shadow: 0 0 0 3px rgba(114, 183, 248, 0.25);
+  -moz-box-shadow: 0 0 0 3px rgba(114, 183, 248, 0.25);
+  box-shadow: 0 0 0 3px rgba(114, 183, 248, 0.25);
+}
+
+#landing-wrapper {
+  width: 100%;
+  padding: 20px;
+}
+#landing-wrapper > #landing-header {
+  background-color: transparent;
+}
+#landing-wrapper > #landing-header > #logo {
+  float: left;
+}
+#landing-wrapper > #landing-header > nav {
+  float: right;
+}
+#landing-wrapper > #landing-header:after {
+  content: '';
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+#landing-wrapper #landing-search {
+  margin: 15% auto 0;
+  float: none;
+}
+#landing-wrapper #landing-search > #search-heading {
+  text-align: center;
+  margin: 10px;
+  font-size: 50px;
+  font-weight: 100;
+}
+#landing-wrapper #landing-search #search-box {
+  display: table;
+  padding: 0;
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+#landing-wrapper #landing-search #search-box > input[type="text"] {
+  display: table-column;
+  width: 90%;
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+}
+#landing-wrapper #landing-search #search-box > button[type="submit"] {
+  display: table-column;
+  width: 10%;
+  background-color: transparent;
+  border: none;
+}

@@ -1,0 +1,91 @@
+@import "mixin";
+
+@import "config";
+
+#message-user{
+	padding:0;
+	> ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	> li{
+	padding:10px;
+	cursor:pointer;
+		display:block;
+		> img{
+			width:50px;
+			height:50px;
+			@include borderRadius(50%);
+			float:left;
+			margin-right:10px;
+		}
+		> h5{
+			font-weight:bold;
+			vertical-align:middle;
+			position:relative;
+			top:15px;
+			font-size:18px;
+		}
+		&.active{
+			background-color:white;
+		}
+		@include ClearFix;
+	}
+	}
+}
+
+.message-content{
+	background-color:#fff;
+	height:100%;
+}
+
+#message-list{
+	height:400px;
+	overflow-y:scroll;
+	> ul{
+		margin:0;
+		padding:0;
+		list-style:none;
+		> li {
+			display:block;
+			padding:10px;
+			> img{
+				float:left;
+				width:30px;
+				height:30px;
+				@include borderRadius(50%);
+			}
+			> p {
+				float:left;
+				margin-left:10px;
+				@include borderRadius(3px);
+				padding:10px;
+				background-color:#ddd;
+			}
+			&.user{
+				> img{
+					float:right;
+				}
+				> p {
+					float:right;
+					margin-right:10px;
+					color:darken($primaryColor,10%);
+					background-color:lighten($primaryColor,40%);
+				}
+			}
+			@include ClearFix;
+		}
+	}
+}
+
+#form-chat{
+	input[type="text"]{
+		width:100%;
+		background-color:#fff;
+		border:0;
+		padding:10px;
+	}
+	button{
+		padding:10px 20px;
+	}
+}

@@ -1,0 +1,29 @@
+@import "config";
+
+table {
+    tr {
+        th, td {
+            text-align: left;
+            padding: 10px;
+        }
+    }
+}
+
+.table-ui{
+	background-color:#fff;
+	width:100%;
+    thead{
+        tr{
+            color:#fff;
+            background-color:$primaryColor;
+        }
+    }
+    tbody{
+        tr:hover{
+            background-color: rgba(0,0,0,.08);
+        }
+    }
+    tr:not(:last-child){
+        border-bottom:1px dashed #ddd;
+    }
+}

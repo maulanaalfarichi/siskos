@@ -1,0 +1,282 @@
+@import "config";
+@import "mixin";
+
+.panel {
+    @include borderRadius(0);
+    @include boxShadow(0 1px 1px rgba(0, 0, 0, .1));
+    border: none;
+    &.panel-default {
+        > .panel-heading {
+            border: none;
+            background-color: $darkBase;
+            color: #fff;
+            > .panel-title {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 25px;
+                font-weight: thin;
+            }
+        }
+    }
+
+    &.panel-fasilitas,
+    &.panel-profile {
+        @include borderRadius(0);
+        @include boxShadow(none);
+        background-color: transparent;
+        > .panel-heading {
+            background-color: transparent;
+            color: $darkBase;
+            padding: 0;
+            > .panel-title {
+                float: left;
+                margin-bottom: 10px;
+                font-size: 20px;
+                + i.fa {
+                    float: right;
+                    cursor: pointer;
+                    &:hover,
+                    &.favorited {
+                        color: $warningColor;
+                    }
+                }
+            }
+            @include ClearFix;
+        }
+        > .panel-body {
+            background-color: #fff;
+            padding: 0;
+            > ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                > li {
+                    padding: 10px;
+                    display: table;
+                    width: 100%;
+                    &:nth-child(even) {
+                        background-color: rgba(0, 0, 0, .03);
+                    }
+                    > span {
+                        display: table-cell;
+                        &:first-child {
+                            text-align: left;
+                        }
+                        &:last-child {
+                            text-align: right;
+                            font-weight: bold;
+                            &.green {
+                                color: $successColor;
+                            }
+                            &.red {
+                                color: $dangerColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.panel-thumb-list {
+    &.panel {
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    > .panel-heading {
+        background-color: transparent;
+        border: none;
+        padding-left: 0;
+        > .panel-title {
+            float: left;
+            font-size: 20px;
+            + .panel-tool {
+                float: right;
+            }
+        }
+        @include ClearFix;
+    }
+
+    > .panel-body{
+        padding: 0;
+    }
+
+    .thumb-property {
+        background-color: #fff;
+        > .row{
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .thumb-heading {
+            @include ClearFix;
+            > .thumb-title {
+                margin-left: 0;
+                border-left: 4px solid $primaryColor;
+                padding-left: 20px;
+                font-weight: bold;
+                float: left;
+            }
+            > .thumb-info {
+                float: right;
+                transform: translateY(10px) translateX(-10px);
+            }
+        }
+
+        *[class*="col-"] {
+            padding: 0;
+        }
+    }
+}
+
+.panel-body {
+    .panel-heading {
+        color: darken($successColor, 35%);
+        margin-left: -15px;
+        margin-right: -15px;
+        background-color: lighten($successColor, 30%);
+        margin-bottom: 15px;
+    }
+}
+
+#searchresult {
+    .thumbnail {
+        border: 0;
+        background-color: #FFFFFF;
+        @include borderRadius(0);
+        padding: 0;
+        > .image {
+            width: 100%;
+            height: 175px;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        > .name {
+            background-color: $primaryColor;
+            padding: 10px;
+            @include getFontColor($darkBase);
+            > h3 {
+                font-size: 17px;
+                margin: 0;
+                padding: 5px 0;
+                font-weight: bold;
+            }
+            > .price {
+                padding: 5px 0;
+                //color:rgba(255,255,255,.65);
+                color: $warningColor;
+            }
+        }
+        > .detail {
+            > .top {
+                margin-top: 10px;
+                > .detail-item {
+                    float: left;
+                    width: 50%;
+                    padding: 5px 10px 10px;
+                    text-align: center;
+                    &:first-child {
+                        border-right: 1px solid rgba(0, 0, 0, .25);
+                    }
+                }
+                @include ClearFix();
+            }
+            > .bottom {
+                padding: 10px;
+                > .detail-item {
+                    padding: 5px 10px;
+                    //border-top:1px solid rgba(0,0,0,.25);
+                    > span {
+                        &:first-child {
+                            float: left;
+                        }
+                        &:last-child {
+                            float: right;
+                            font-weight: bold;
+                        }
+                        &.green {
+                            color: $successColor;
+                        }
+                        &.red {
+                            color: $dangerColor;
+                        }
+                    }
+                    @include ClearFix;
+                }
+            }
+        }
+        > .action {
+            padding: 10px 10px 10px;
+            background-color: $mediumBase;
+            > .dropup {
+                float: left;
+            }
+            > a {
+                float: right;
+                &:visited,
+                &:link,
+                &:hover {
+                    color: $primaryColor;
+                    font-weight: bold;
+                }
+            }
+            @include ClearFix;
+        }
+    }
+}
+
+.thumbnail{
+    @include borderRadius(0);
+    @include boxShadow(none);
+    border:0;
+    padding:0;
+    > .header{
+        > h3{
+            margin: 0;
+            padding:20px 20px 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        > h4{
+            margin: 0;
+            padding: 0 20px 10px;
+            font-weight: 300;
+            font-size: 16px;
+            color: rgba(0,0,0,.5);
+        }
+    }
+    > .image{
+        > img {
+            width:100%;
+            height:150px;
+        }
+    }
+    > .price{
+         background-color: $primaryColor;
+         @include borderRadius(3px);
+         padding:7px;
+         color:#fff;
+         position: relative;
+         top:-15px;
+         left:20px;
+     }
+    > .info{
+        margin:0 10px;
+        @include ClearFix;
+        > div {
+            float: left;
+            width: 50%;
+            padding:0 10px 10px;
+            > span{
+                display: block;
+                text-align: center;
+                &:last-child{
+                    font-weight: bold;
+                }
+            }
+        }
+        border-bottom: 2px dashed rgba(0,0,0,.5);
+    }
+}

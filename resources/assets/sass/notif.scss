@@ -1,0 +1,39 @@
+@import "mixin";
+
+@import "config";
+
+.panel-notif{
+    background-color: #fff;
+    padding: 20px 5px 20px;
+    margin-right: 0;
+    margin-left: 0;
+    > .notif-body{
+        > .notif-heading{
+            margin: 0 0 10px;
+        }
+    }
+    &.notif-lg{
+
+    }
+    @include ClearFix;
+}
+
+.alert{
+    &.alert{
+        &-info{
+            background-color: lighten($primaryColor, 42%);
+            border-color:$primaryColor;
+            color:darken($primaryColor,20%);
+        }
+        &-warning{
+            background-color: lighten($warningColor, 50%);
+            border-color:$warningColor;
+            color:darken($warningColor,10%);
+        }
+		&-danger{
+			background-color: lighten($dangerColor, 40%);
+            border-color:$dangerColor;
+            color:darken($dangerColor,10%);
+		}
+    }
+}
